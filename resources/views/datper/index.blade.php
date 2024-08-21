@@ -74,10 +74,13 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {!! $datpers->links() !!}
                         </div>
+                        
                     </div>
+                    
                 </div>
-                {!! $datpers->links() !!}
+                
             </div>
         </div>
     </div>
