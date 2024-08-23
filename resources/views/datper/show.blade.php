@@ -14,7 +14,7 @@
                             <span class="card-title">{{ __('Mostrar') }} datos de paciente</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('datpers.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('datpers.index') }}"> {{ __('Regresar') }}</a>
                         </div>
                     </div>
 
