@@ -12,11 +12,26 @@
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="row">
-                            <div class="col-lg-12 stretch-card">
-                                <div class="card">
-                                    <div class="card">
-                            
-
+                            <div class="col-lg-12">
+                                        <span class="card-title">Busqueda por parametros:</span>
+                                        <form action="" method="get">
+                                        <div class="row">
+                                            
+                                        <div class="col-sm-7">
+                                              <div class="mb-3">
+                                                <label class="form-label">Nombre:</label>
+                                                <input type="text" name="nombre" class="form-control" value="{{Request()->nombre1}}" placeholder="ingrese el nombre.....">
+                                            </div> 
+                                        </div> 
+                                    
+                                            <div class="col-sm-5">
+                                              <div class="mb-3">
+                                                <label class="form-label">Cedula de identidad:</label>
+                                                <input type="text" name="nombre" class="form-control" value="{{Request()->CI}}" placeholder="numero de cedula">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Buscar</button>
+                                            <a href="{{ url('/datpers') }}" class="btn btn-danger">Reiniciar</a>
+                                    </form>
                                     </div>                                    
                                 </div>
                             </div>
