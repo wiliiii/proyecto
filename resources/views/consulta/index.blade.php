@@ -11,11 +11,31 @@
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-
-                            <span id="card_title">
-                                {{ __('Consultas') }}
-                            </span>
-
+                            <div class="row">
+                                <div class="col-lg-12">
+                                            <span class="card-title">Busqueda por parametros:</span>
+                                            <form action="" method="get">
+                                            <div class="row">
+                                                
+                                            <div class="col-sm-7">
+                                                  <div class="mb-3">
+                                                    <label class="form-label">Numero de consulta:</label>
+                                                    <input type="text" name="nombre" class="form-control" value="{{Request()->nombre1}}" placeholder="numero de consulta">
+                                                </div> 
+                                            </div> 
+                                        
+                                                <div class="col-sm-5">
+                                                  <div class="mb-3">
+                                                    <label class="form-label">Cedula del paciente:</label>
+                                                    <input type="text" name="ci" class="form-control" value="{{Request()->CI}}" placeholder="numero de cedula">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Buscar</button>
+                                                <a href="{{ url('/datpers') }}" class="btn btn-danger">Reiniciar</a>
+                                        </form>
+                                    </div>                                    
+                                    </div>
+                                </div>
+                            </div>
                              <div class="float-right">
                                 <a href="{{ route('consultas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Crear registro') }}

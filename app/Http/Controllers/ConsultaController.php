@@ -71,7 +71,7 @@ class ConsultaController extends Controller
         $consulta->update($request->validated());
 
         return Redirect::route('consultas.index')
-            ->with('success', 'Consulta updated successfully');
+            ->with('success', 'datos de consulta actualizados!!!');
     }
 
     public function destroy($id): RedirectResponse
@@ -79,6 +79,6 @@ class ConsultaController extends Controller
         Consulta::find($id)->delete();
 
         return Redirect::route('consultas.index')
-            ->with('success', 'Consulta deleted successfully');
+            ->with('success', 'datos de consulta borrados exitosamente!!!');
     }
 }

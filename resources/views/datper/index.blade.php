@@ -32,7 +32,7 @@
                                             <button type="submit" class="btn btn-primary">Buscar</button>
                                             <a href="{{ url('/datpers') }}" class="btn btn-danger">Reiniciar</a>
                                     </form>
-                                    </div>                                    
+                                </div>                                    
                                 </div>
                             </div>
                         </div>
