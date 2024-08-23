@@ -24,6 +24,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+
+                @auth
+                <a class="navbar-brand" href="{{url ('/datpers')}}">
+                    {{config('Pacientes','Pacientes')}}
+                </a>
+                <a class="navbar-brand" href="{{url ('/consultas')}}">
+                    {{config('Consultas','Consultas')}}
+                </a>
+                @endauth
+
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">

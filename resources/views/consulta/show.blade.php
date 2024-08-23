@@ -1,17 +1,20 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $consulta->name ?? __('Show') . " " . __('Consulta') }}
+    {{ $consulta->name ?? __('Show') . " " . __('Consultas') }}
 @endsection
 
 @section('content')
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
+                <a class="navbar-brand" href="{{url (/datpers)}}">
+                    {{config('app.name','Pacientes')}}
+                </a>
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Consulta</span>
+                            <span class="card-title">{{ __('Show') }} Consultas</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary btn-sm" href="{{ route('consultas.index') }}"> {{ __('Back') }}</a>

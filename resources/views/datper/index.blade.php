@@ -11,8 +11,16 @@
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="row">
+                            <div class="col-lg-12 stretch-card">
+                                <div class="card">
+                                    <div class="card">
                             
 
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
                              <div class="float-right">
                                 <a href="{{ route('datpers.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Crear registro') }}
