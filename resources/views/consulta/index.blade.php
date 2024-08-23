@@ -20,17 +20,17 @@
                                             <div class="col-sm-7">
                                                   <div class="mb-3">
                                                     <label class="form-label">Numero de consulta:</label>
-                                                    <input type="text" name="nombre" class="form-control" value="{{Request()->nombre1}}" placeholder="numero de consulta">
+                                                    <input type="text" name="no_consulta" class="form-control" value="{{Request()->no_consulta}}" placeholder="numero de consulta">
                                                 </div> 
                                             </div> 
                                         
                                                 <div class="col-sm-5">
                                                   <div class="mb-3">
                                                     <label class="form-label">Cedula del paciente:</label>
-                                                    <input type="text" name="ci" class="form-control" value="{{Request()->CI}}" placeholder="numero de cedula">
+                                                    <input type="text" name="num_historia" class="form-control" value="{{Request()->num_historia}}" placeholder="numero de cedula">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Buscar</button>
-                                                <a href="{{ url('/datpers') }}" class="btn btn-danger">Reiniciar</a>
+                                                <a href="{{ url('/consultas') }}" class="btn btn-danger">Reiniciar</a>
                                         </form>
                                     </div>                                    
                                     </div>

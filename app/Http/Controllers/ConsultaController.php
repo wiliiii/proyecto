@@ -16,10 +16,20 @@ class ConsultaController extends Controller
      */
     public function index(Request $request): View
     {
-        $consultas = Consulta::paginate();
+        $query = Consulta::query();
 
+        if ($request->has('no_consulta') && $request->no_consulta != '') {
+            $query->where('no_consulta', 'like', '%' . $request->no_consulta . '%');
+        }
+    
+        if ($request->has('num_historia') && $request->num_historia != '') {
+            $query->where('num_historia', $request->num_historia);
+        }
+    
+        $consultas = $query->paginate(15);
+    
         return view('consulta.index', compact('consultas'))
-            ->with('i', ($request->input('page', 1) - 1) * $consultas->perPage());
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
