@@ -21,19 +21,19 @@
                     <div class="card-body bg-white">
                         
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Num Historia:</strong>
+                                    <strong>Paciente</strong>
                                     {{ $consulta->num_historia }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>No Consulta:</strong>
+                                    <strong>Consulta</strong>
                                     {{ $consulta->no_consulta }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Fecha Cons:</strong>
+                                    <strong>Fecha</strong>
                                     {{ $consulta->fecha_cons }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Motivo:</strong>
+                                    <strong>Motivo de consulta:</strong>
                                     {{ $consulta->motivo }}
                                 </div>
                                 <div class="form-group mb-2 mb20">

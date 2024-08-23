@@ -16,7 +16,7 @@ class datpers extends Model
     'direccion', 'fono',
     'fono2', 'celular', 'ciudad'];
 
-    public function consultas1(){
+    public function consultas(){
         return $this->hasMany('App\Models\consultas','no_historia','ci');
     }
 }
