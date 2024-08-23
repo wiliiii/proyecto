@@ -23,16 +23,9 @@ class DatperController extends Controller
                 ->with('i', ($request->input('page', 1) - 1) * $datpers->perPage());
 
             $search = $request->input('search');
-
-            // Busca en el título y el contenido del post
-            $posts = Datper::query()
-                ->when($search, function ($query, $search) {
-                    return $query->where('no_historia', 'like', "%{$search}%")
-                                 ->orWhere('nombre', 'like', "%{$search}%");
-                })
-                ->paginate(10); // Puedes ajustar el número de publicaciones por página
-        
-            return view('posts.index', compact('posts'));
+            
+    
+        return view('datpers.index', compact('datpers'));
     }
 
     /**
@@ -53,7 +46,7 @@ class DatperController extends Controller
         Datper::create($request->validated());
 
         return Redirect::route('datpers.index')
-            ->with('success', 'Datper created successfully.');
+            ->with('success', 'Paciente creado Exitosamente.');
     }
 
     /**
@@ -84,7 +77,7 @@ class DatperController extends Controller
         $datper->update($request->validated());
 
         return Redirect::route('datpers.index')
-            ->with('success', 'Datper updated successfully');
+            ->with('success', 'Modificaciones realizadas con exito!!');
     }
 
     public function destroy($id): RedirectResponse
@@ -92,7 +85,7 @@ class DatperController extends Controller
         Datper::find($id)->delete();
 
         return Redirect::route('datpers.index')
-            ->with('success', 'Datper deleted successfully');
+            ->with('success', 'Datos eliminados');
     }
 
 }

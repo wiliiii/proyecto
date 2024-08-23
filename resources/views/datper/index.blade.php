@@ -27,7 +27,7 @@
                                             <div class="col-sm-5">
                                               <div class="mb-3">
                                                 <label class="form-label">Cedula de identidad:</label>
-                                                <input type="text" name="nombre" class="form-control" value="{{Request()->CI}}" placeholder="numero de cedula">
+                                                <input type="text" name="ci" class="form-control" value="{{Request()->CI}}" placeholder="numero de cedula">
                                             </div>
                                             <button type="submit" class="btn btn-primary">Buscar</button>
                                             <a href="{{ url('/datpers') }}" class="btn btn-danger">Reiniciar</a>
