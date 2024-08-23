@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('consultas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear registro') }}
                                 </a>
                               </div>
                         </div>
@@ -36,9 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
-									<th >Num Historia</th>
-									<th >No Consulta</th>
-									<th >Fecha Cons</th>
+									<th >Paciente</th>
+									<th >Consulta</th>
+									<th >Fecha</th>
 									<th >Motivo</th>
 									<th >Problema</th>
 									<th >Diagnostico</th>
@@ -60,11 +60,11 @@
 
                                             <td>
                                                 <form action="{{ route('consultas.destroy', $consulta->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('consultas.show', $consulta->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('consultas.edit', $consulta->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('consultas.show', $consulta->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('consultas.edit', $consulta->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Esta seguro de borrar el registro? Esta accion no se puede revertir') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Borrar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>

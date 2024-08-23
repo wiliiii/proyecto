@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Datos de pacientes</span>
+                            <span class="card-title">{{ __('Mostrar') }} datos de paciente</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary btn-sm" href="{{ route('datpers.index') }}"> {{ __('Back') }}</a>
@@ -21,23 +21,23 @@
                     <div class="card-body bg-white">
                         
                                 <div class="form-group mb-2 mb20">
-                                    <strong>No Historia:</strong>
+                                    <strong>Historia:</strong>
                                     {{ $datper->no_historia }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Ci:</strong>
+                                    <strong>Cedula de identidad:</strong>
                                     {{ $datper->CI }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Nombre1:</strong>
+                                    <strong>Nombre:</strong>
                                     {{ $datper->nombre1 }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Appaterno:</strong>
+                                    <strong>Apellido paterno:</strong>
                                     {{ $datper->appaterno }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Apmaterno:</strong>
+                                    <strong>Apellido materno:</strong>
                                     {{ $datper->apmaterno }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
@@ -45,11 +45,11 @@
                                     {{ $datper->sexo }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Est Civil:</strong>
+                                    <strong>Estado Civil:</strong>
                                     {{ $datper->est_civil }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Fec Nac:</strong>
+                                    <strong>Fecha de Nacimiento:</strong>
                                     {{ $datper->fec_nac }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
@@ -57,11 +57,11 @@
                                     {{ $datper->direccion }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Fono:</strong>
+                                    <strong>telefono:</strong>
                                     {{ $datper->fono }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Fono2:</strong>
+                                    <strong>Referencia:</strong>
                                     {{ $datper->fono2 }}
                                 </div>
                                 <div class="form-group mb-2 mb20">

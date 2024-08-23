@@ -16,16 +16,20 @@ class DatperController extends Controller
      */
     public function index(Request $request): View
     {
-            $datpers = Datper::orderBy('no_historia','asc')
-            ->paginate(15);
+        $query = Datper::query();
 
-            return view('datper.index', compact('datpers'))
-                ->with('i', ($request->input('page', 1) - 1) * $datpers->perPage());
-
-            $search = $request->input('search');
-            
+        if ($request->has('nombre') && $request->nombre != '') {
+            $query->where('nombre1', 'like', '%' . $request->nombre . '%');
+        }
     
-        return view('datpers.index', compact('datpers'));
+        if ($request->has('ci') && $request->ci != '') {
+            $query->where('CI', $request->ci);
+        }
+    
+        $datpers = $query->paginate(15);
+    
+        return view('datper.index', compact('datpers'))
+            ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
